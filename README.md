@@ -1,0 +1,71 @@
+
+<div align="center">
+  <h3 align="center">Laravel Docker rME</h3>
+  <p align="center">
+    Project Starter For Web Application Development with Laravel, MySQL, Nginx, and Docker.
+    <br />
+  </p>
+</div>
+
+
+
+
+## Getting Started
+
+Follow the instructions below to set up your project.
+
+
+
+<!-- USAGE EXAMPLES -->
+## Run App With GNU Make (UNIX Based OS: MacOS, Linux)
+
+- `make run-app-with-setup` : build docker and start all docker containers with Laravel setup
+- `make run-app-with-setup-db` : build docker and start all docker containers with Laravel setup + database migration and seeder
+- `make run-app` : start all docker container
+- `make kill-app` : kill all docker container
+- `make enter-nginx-container` : enter docker nginx container
+- `make enter-php-container` : enter docker php container
+- `make enter-mysql-container` : enter docker mysql container
+- `make flush-db` : run php migrate fresh command
+- `make flush-db-with-seeding` : run php migrate fresh command with seeding
+- `make code-format-check` : run npm command to run prettier to check your code
+- `make code-format`: run npm command to run prettier to format your code
+- `make code-test`: run php artisan test command
+
+<!-- USAGE EXAMPLES -->
+## Run App Manually
+
+![preview-docker-laravel](https://user-images.githubusercontent.com/49280352/131224609-401fcd2b-a815-49f2-8164-b6d9b77df87c.gif)
+
+- Create .env file for the Laravel environment from .env.example on src folder
+- Run command ```docker-compose build``` on your terminal
+- Run command ```docker-compose up -d``` on your terminal
+- Run command ```composer install``` on your terminal after going into the php container on docker
+- Run command ```docker exec -it php /bin/sh``` on your terminal
+- Run command ```chmod -R 777 storage``` on your terminal after going into the php container on docker
+- If app:key still empty on .env run ```php artisan key:generate``` on your terminal after going into the php container on docker
+- To run artisan commands like migrate, etc. go to php container using ```docker exec -it php /bin/sh```
+- Go to http://localhost:8001 or any port you set to open Laravel
+
+
+<!-- ABOUT THE PROJECT -->
+## Features
+
+* [Docker](https://www.docker.com/)
+* [Dockerfile with Alpine](https://hub.docker.com/_/alpine)
+* [Nginx](https://www.nginx.com)
+* [Laravel 11](https://laravel.com/)
+* [MySQL](https://www.mysql.com/)
+* [PHP 8.2](https://nodejs.org)
+* [Node](https://nodejs.org)
+* [NPM](https://www.npmjs.com)
+* [PHP Prettier](https://github.com/prettier/plugin-php)
+
+
+<!-- GETTING STARTED -->
+
+## Notes
+
+
+
+# docker-laravel-11
