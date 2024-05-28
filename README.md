@@ -1,19 +1,7 @@
 
-<div align="center">
-  <h3 align="center">Laravel Docker rME</h3>
-  <p align="center">
-    Project Starter For Web Application Development with Laravel, MySQL, Nginx, and Docker.
-    <br />
-  </p>
-</div>
-
-
-
-
 ## Getting Started
 
 Follow the instructions below to set up your project.
-
 
 
 <!-- USAGE EXAMPLES -->
@@ -48,24 +36,6 @@ Follow the instructions below to set up your project.
 - Go to http://localhost:8001 or any port you set to open Laravel
 
 
-<!-- ABOUT THE PROJECT -->
-## Features
-
-* [Docker](https://www.docker.com/)
-* [Dockerfile with Alpine](https://hub.docker.com/_/alpine)
-* [Nginx](https://www.nginx.com)
-* [Laravel 11](https://laravel.com/)
-* [MySQL](https://www.mysql.com/)
-* [PHP 8.2](https://nodejs.org)
-* [Node](https://nodejs.org)
-* [NPM](https://www.npmjs.com)
-* [PHP Prettier](https://github.com/prettier/plugin-php)
-
-
-<!-- GETTING STARTED -->
-
 ## Notes
 
 
-
-# docker-laravel-11
