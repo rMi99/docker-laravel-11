@@ -11,6 +11,12 @@ export GID
 up:
 	UID=${UID} GID=${GID} docker-compose -f docker-compose.yml --profile main up --build -d --remove-orphans
 
+build:
+	cp ./src/.env.example ./src/.env
+	UID=${UID} GID=${GID} docker-compose -f docker-compose.yml --profile main up --build -d --remove-orphans
+	docker exec php /bin/sh -c "composer install && npm install && chmod -R 777 storage && php artisan key:generate && php artisan migrate:fresh --seed"
+
+
 run-app-with-setup:
 	cp ./src/.env.example ./src/.env
 	docker compose build
