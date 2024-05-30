@@ -1,3 +1,16 @@
+#!/usr/bin/make
+
+SHELL = /bin/sh
+
+UID := $(shell id -u)
+GID := $(shell id -g)
+
+export UID
+export GID
+
+up:
+	UID=${UID} GID=${GID} docker-compose -f docker-compose.yml --profile main up --build -d --remove-orphans
+
 run-app-with-setup:
 	cp ./src/.env.example ./src/.env
 	docker compose build
